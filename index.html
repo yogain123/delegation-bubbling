@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="parent">
+        <li class="child">one</li>
+        <li class="child">two</li>
+        <li class="child">three</li>
+        <li class="child">four</li>
+        <li class="child">five</li>
+        <li class="child">six</li>
+        <li class="child">seven</li>
+    </ul>
+
+
+    <ul id="parent1">
+        <li class="child1">one</li>
+        <li class="child1">two</li>
+        <li class="child1">three</li>
+        <li class="child1">four</li>
+        <li class="child1">five</li>
+        <li class="child1">six</li>
+        <li class="child1">seven</li>
+    </ul>
+
+    <ul onClick=parent2click(event) id="parent2">
+        <li onClick=child2clickk(event) class="child2">one</li>
+        <li onClick=child2click(event) class="child2">two</li>
+        <li onClick=child2click(event) class="child2">three</li>
+        <li onClick=child2click(event) class="child2">four</li>
+        <li onClick=child2click(event) class="child2">five</li>
+        <li onClick=child2click(event) class="child2">six</li>
+        <li onClick=child2click(event) class="child2">seven</li>
+    </ul>
+
+    <script type="text/javascript">
+
+    //========== Event In a most obvisous way ===================
+    let children = Array.from(document.getElementsByClassName("child"));
+    for (const child of children) {
+        child.addEventListener('click',()=>{
+            console.log("clicked child", child.innerHTML, "from Obvious Way");
+        })        
+    }
+
+    //========== Event In a most obvisous way ===================
+
+    //========== Event Delegation ===============================
+
+
+    let parent = document.getElementById('parent1');
+    parent.addEventListener('click',(event)=>{
+        console.log("clicked child", event.target.innerHTML,"from Event delegation");
+    })
+
+    //========== Event Delegation ===============================
+
+
+    //================ BUBBLING ===================
+
+    function parent2click(event){
+        alert("parent");
+    }
+
+    function child2click(event){
+        alert("child :Stop Propagation");
+        event.stopPropagation();
+    }
+
+    function child2clickk(event){
+        alert("child : DO NOT Stop Propagation");
+    }
+
+    //================ BUBBLING ====22===============
+</script>
+</body>
+</html>

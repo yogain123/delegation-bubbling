@@ -1,0 +1,25 @@
+{
+  "name": "delegation-bubbling",
+  "version": "1.0.0",
+  "description": "Event Delegation and Bubbling, and Capturing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yogain123/delegation-bubbling.git"
+  },
+  "keywords": [
+    "events",
+    "delegation",
+    "bubbling",
+    "capturing"
+  ],
+  "author": "yogendra saxena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yogain123/delegation-bubbling/issues"
+  },
+  "homepage": "https://github.com/yogain123/delegation-bubbling#readme"
+}
