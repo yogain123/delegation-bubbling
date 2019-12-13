@@ -1,6 +1,6 @@
 document.querySelector("#grandparent").addEventListener('click',()=>{
     console.log("Grand Parent Clicked");
-},false)   // 3rd para is useCapture = false | false
+},false)   // 3rd para is useCapture = true | false
 
 document.querySelector("#parentt").addEventListener('click',()=>{
     console.log("Parentt Clicked");
@@ -11,7 +11,7 @@ document.querySelector("#child").addEventListener('click',()=>{
 },true)
 
 
-//when true ==> capturing mode 
+// when true ==> capturing mode 
 // when false ==> bubbling mode
 
 /**
